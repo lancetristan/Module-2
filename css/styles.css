@@ -1,0 +1,117 @@
+/* Base styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background: #fff;
+  color: #000;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Headers for each section */
+.menu-section h2 {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  margin: 0;
+  padding: 5px 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 2px;
+}
+
+/* Make each section a positioned container */
+.menu-section {
+  position: relative;
+  padding: 15px;
+  padding-top: 40px; /* space for header */
+  box-sizing: border-box;
+}
+
+/* Header colors */
+.chicken-header {
+  background-color: #f7c080;
+  color: #000;
+}
+
+.beef-header {
+  background-color: #b84747;
+  color: #fff;
+}
+
+.sushi-header {
+  background-color: #e6dba8;
+  color: #000;
+}
+
+/* Chicken section */
+.menu-section.chicken {
+  background-color: #fde4c8;
+  border: 2px solid #000;
+}
+
+/* Beef section */
+.menu-section.beef {
+  background-color: #f2c9c9;
+  border: 2px solid #000;
+}
+
+/* Sushi section */
+.menu-section.sushi {
+  background-color: #f7f3df;
+  border: 2px solid #000;
+}
+
+/* Desktop layout */
+@media (min-width: 901px) {
+  .menu {
+    max-width: 1200px;
+  }
+
+  .menu-section {
+    flex: 0 0 32%;
+  }
+}
+
+/* Tablet layout */
+@media (min-width: 601px) and (max-width: 900px) {
+  .menu {
+    flex-wrap: wrap;
+    max-width: 600px;
+  }
+
+  .menu-section {
+    flex: 0 0 48%;
+    margin-bottom: 20px;
+  }
+
+  .menu-section.sushi {
+    flex: 0 0 100%;
+  }
+}
+
+/* Mobile layout */
+@media (max-width: 600px) {
+  .menu {
+    flex-direction: column;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .menu-section {
+    flex: none;
+    width: 90%;
+    margin: 0 auto 20px;
+  }
+}
